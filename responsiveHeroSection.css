@@ -1,0 +1,41 @@
+@media only screen and (max-width: 992px){
+  .heroImage:nth-child(2){
+    opacity: 0;
+  }
+  .heroImage:nth-child(1){
+    opacity: 0;
+  }
+}
+@media only screen and (max-width: 768px){
+  .hero-section img{
+    max-width: 100%;
+  }
+  .hero-section{
+    height: 100vh;
+  }
+}
+@media only screen and (max-width: 1200px){
+  .hero-section::before{
+    bottom: 0;
+  }
+}
+@media only screen and (max-width: 768px){
+  .hero-section::before{
+    width: 1100px;
+    min-height: 920px;
+    left: -370px;
+    top: -400px;
+    height: 100%;
+  }
+}
+@media only screen and (max-width: 576px){
+  .hero-section::before{
+    width: 558px;
+    height: 558px;
+    bottom: 0;
+    min-height: 1px;
+    left: auto;
+    top: -200px;
+    right: 0;
+  }
+}
