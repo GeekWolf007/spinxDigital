@@ -23,7 +23,9 @@ body {
   color: #fff;
   font-size: 16px;
   min-height: 100vh;
+  scrollbar-width: thin;
 }
+
 
 
 
@@ -3206,6 +3208,17 @@ footer{
   #twoImageImageTwo{
     z-index: -1;
     opacity: 0.25;
+  }
+  .awardsHeading{
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .awardsCard{
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .projectsHeading{
+    opacity: 1;
   }
 }
 @media only screen and (max-width:576px){
