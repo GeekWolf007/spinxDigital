@@ -319,6 +319,7 @@ header,
   font-size: 14px;
   letter-spacing: 1.5px;
   z-index: 9999;
+  position: relative;
 }
 .menuItemsLink {
   font-family: 'Inter', sans-serif;
@@ -442,6 +443,118 @@ a.anchorWithoutDrop::before {
 }
 .colorChangeBlack {
   filter: brightness(0) saturate(100%);
+}
+.expertiseHoverContainer{
+  position: absolute;
+  background-color: #fff;
+  width: 768px;
+  top: calc(100% - 15px);
+  padding: 40px 0 0;
+  opacity: 0;
+  transform: translateY(13px);
+  display: none;
+  transition: transform .65s cubic-bezier(.2,.8,.25,1),opacity .65s cubic-bezier(.2,.8,.25,1);
+  -webkit-transition: transform .65s cubic-bezier(.2,.8,.25,1),opacity .65s cubic-bezier(.2,.8,.25,1);
+  left: -160px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.ehcRight{
+  padding-left:  40px;
+  padding-right: 20px;
+  width: 60%;
+}
+.ehcRight h4{
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: left;
+  letter-spacing: 1.5px;
+  color: #8e919c;
+  padding-bottom: 16px;
+}
+.ehcRightLinks{
+  padding-bottom: 28px;
+}
+.ehcLeftLinks{
+  padding-bottom: 28px;
+}
+.ehcrLinks{
+  margin: 0 0 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.ehcrLinks a{
+  text-decoration: none;
+  font-family: 'Inter',sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 32px;
+  color: #16171a;
+  display: inline-block;
+  text-transform: none;
+  position: relative;
+  margin-bottom: 12px;
+}
+.ehcrLinks a::before{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  height: 1px;
+  left: -1px;
+  right: -1px;
+  background-color: #16171a;
+  opacity: 0;
+  transition: all .8s ease;
+}
+.ehcrLinks a:hover::before{
+  opacity: 1;
+}
+.ehclLinks a{
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #16171a;
+  font-family: Inter,sans-serif;
+  display: inline-block;
+  text-transform: none;
+  position: relative;
+  margin-bottom: 12px;
+}
+.ehcLeft{
+  width: 40%;
+  padding-left: 20px;
+  padding-right: 40px;
+}
+.ehcLeft h4{
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: left;
+  letter-spacing: 1.5px;
+  color: #8e919c;
+  padding-bottom: 16px;
+}
+.ehcBottom{
+  width: 100%;
+  padding: 0 40px;
+}
+.ehcbContainer{
+  border-top: 1px solid #d6d6db;
+  padding: 22px 0;
+}
+.ehcbContainer a{
+  display: inline-block;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 26px;
+  color: #16171a;
+  text-transform: none;
+  position: relative;
+  font-weight: 400;
 }
 
 
