@@ -969,11 +969,11 @@ a.anchorWithoutDrop::before {
 .imgContainer img{
   position: absolute;
   background-size: cover;
-  top: 0;
+  /* top: 0;
   left: 0;
   right: 0;
-  bottom: 0;
-  height: 100%;
+  bottom: 0; */
+  height: auto;
   width: 100%;
   background-repeat: no-repeat;
   display: inline-block;
@@ -3175,6 +3175,9 @@ footer{
   .span_p1and3{
     padding: 20px 120px 0 0;
   }
+  .p2_img span{
+    opacity: 0;
+  }
 }
 @media only screen and (max-width:880px){
   .twoImageTextInner {
@@ -3236,6 +3239,24 @@ footer{
     line-height: 46px;
     letter-spacing: -1.25px;
     margin-top: -5px;
+  }
+  .imgContainer{
+    min-height: 250px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .imgContainer img{
+    height: auto;
+  }
+  .p2_img{
+    min-height: 250px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .imageContainer{
+    padding: 15px !important;
   }
 }
 @media only screen and (max-width:380px){
@@ -3302,6 +3323,13 @@ footer{
   }
   .h1Heading {
     width: 100%;
+  }
+  .imgContainer img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
   }
 }
 @media only screen and (min-width:768px){
