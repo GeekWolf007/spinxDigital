@@ -284,191 +284,193 @@ const topRatedHoverContainer6img = document.getElementById("topRatedHoverContain
 const topRatedHoverContainer6image = document.getElementById("topRatedHoverContainer6image");
 
 
+if(window.innerWidth>=1000){
 
-window.onpointermove = (event) => {
-  const { clientX, clientY } = event;
-  
-  cursor.style.display = "block";
-  cursorCircle.style.display = "block";
-  cursor.style.opacity = "1";
-  cursorCircle.style.opacity = "1";
-  cursor.style.left = `${clientX}px`;
-  cursor.style.top = `${clientY}px`;
-  insights2ContainerImage.style.left = `${clientX}px`;
-  insights2ContainerImage.style.top = `${clientY}px`;
-  insights3ContainerImage.style.left = `${clientX}px`;
-  insights3ContainerImage.style.top = `${clientY}px`;
-  topRatedHoverContainer1img.style.top = `${clientY}px`;
-  topRatedHoverContainer1img.style.left = `${clientX}px`;
-  topRatedHoverContainer2img.style.left = `${clientX}px`;
-  topRatedHoverContainer2img.style.top = `${clientY}px`;
-  topRatedHoverContainer3img.style.left = `${clientX}px`;
-  topRatedHoverContainer3img.style.top = `${clientY}px`;
-  topRatedHoverContainer4img.style.left = `${clientX}px`;
-  topRatedHoverContainer4img.style.top = `${clientY}px`;
-  topRatedHoverContainer5img.style.left = `${clientX}px`;
-  topRatedHoverContainer5img.style.top = `${clientY}px`;
-  topRatedHoverContainer6img.style.left = `${clientX}px`;
-  topRatedHoverContainer6img.style.top = `${clientY}px`;
-  
-  let _clientX = clientX - 12;
-  let _clientY = clientY - 12;
-  
-  cursorCircle.animate(
-    {
-      left: `${_clientX}px`,
-      top: `${_clientY}px`,
-    },{ duration: 600, fill: "forwards" }
-    );
-  };
-  document.documentElement.addEventListener("mouseleave", () => {
-    cursor.style.display = "none";
-    cursorCircle.style.display = "none";
-    cursor.style.opacity = "0";
-    cursorCircle.style.opacity = "0";
-  });
-  const cursorHovered = () =>{
-    cursorCircle.classList.add("cursorHovered")
-  };
-  const cursorNotHovered = () =>{
-    cursorCircle.classList.remove("cursorHovered")
-  };
-  insights1Container.addEventListener("mouseover", () => {
-    cursor.style.visibility = "hidden";
+  window.onpointermove = (event) => {
+    const { clientX, clientY } = event;
+    
+    cursor.style.display = "block";
+    cursorCircle.style.display = "block";
+    cursor.style.opacity = "1";
+    cursorCircle.style.opacity = "1";
+    cursor.style.left = `${clientX}px`;
+    cursor.style.top = `${clientY}px`;
+    insights2ContainerImage.style.left = `${clientX}px`;
+    insights2ContainerImage.style.top = `${clientY}px`;
+    insights3ContainerImage.style.left = `${clientX}px`;
+    insights3ContainerImage.style.top = `${clientY}px`;
+    topRatedHoverContainer1img.style.top = `${clientY}px`;
+    topRatedHoverContainer1img.style.left = `${clientX}px`;
+    topRatedHoverContainer2img.style.left = `${clientX}px`;
+    topRatedHoverContainer2img.style.top = `${clientY}px`;
+    topRatedHoverContainer3img.style.left = `${clientX}px`;
+    topRatedHoverContainer3img.style.top = `${clientY}px`;
+    topRatedHoverContainer4img.style.left = `${clientX}px`;
+    topRatedHoverContainer4img.style.top = `${clientY}px`;
+    topRatedHoverContainer5img.style.left = `${clientX}px`;
+    topRatedHoverContainer5img.style.top = `${clientY}px`;
+    topRatedHoverContainer6img.style.left = `${clientX}px`;
+    topRatedHoverContainer6img.style.top = `${clientY}px`;
+    
+    let _clientX = clientX - 12;
+    let _clientY = clientY - 12;
+    
+    cursorCircle.animate(
+      {
+        left: `${_clientX}px`,
+        top: `${_clientY}px`,
+      },{ duration: 600, fill: "forwards" }
+      );
+    };
+    document.documentElement.addEventListener("mouseleave", () => {
+      cursor.style.display = "none";
+      cursorCircle.style.display = "none";
+      cursor.style.opacity = "0";
+      cursorCircle.style.opacity = "0";
+    });
+    const cursorHovered = () =>{
+      cursorCircle.classList.add("cursorHovered")
+    };
+    const cursorNotHovered = () =>{
+      cursorCircle.classList.remove("cursorHovered")
+    };
+    insights1Container.addEventListener("mouseover", () => {
+      cursor.style.visibility = "hidden";
+      cursorCircle.style.visibility = "hidden";
+    });
+    insights1Container.addEventListener("mouseout", () => {
+      cursor.style.visibility = "visible";
+      cursorCircle.style.visibility = "visible";
+    });
+    insights2Container.addEventListener("mouseover", () => {
+      cursor.style.visibility = "hidden";
     cursorCircle.style.visibility = "hidden";
+    insights2ContainerImage.style.opacity = ".5";
+    insights2ContainerImage.style.clipPath = "inset(0px)";
+    insights2ContainerImage.style.visibility = "visible";
+    insights2ContainerImageimg.style.transform = "scale(1)";
   });
-  insights1Container.addEventListener("mouseout", () => {
+  insights2Container.addEventListener("mouseout", () => {
     cursor.style.visibility = "visible";
     cursorCircle.style.visibility = "visible";
+    insights2ContainerImage.style.opacity = "0";
+    insights2ContainerImage.style.clipPath = "inset(100% 0px 0px)";
+    insights2ContainerImage.style.visibility = "hidden";
+    insights2ContainerImageimg.style.transform = "scale(1.2)";
   });
-  insights2Container.addEventListener("mouseover", () => {
+  insights3Container.addEventListener("mouseover", () => {
     cursor.style.visibility = "hidden";
-  cursorCircle.style.visibility = "hidden";
-  insights2ContainerImage.style.opacity = ".5";
-  insights2ContainerImage.style.clipPath = "inset(0px)";
-  insights2ContainerImage.style.visibility = "visible";
-  insights2ContainerImageimg.style.transform = "scale(1)";
-});
-insights2Container.addEventListener("mouseout", () => {
-  cursor.style.visibility = "visible";
-  cursorCircle.style.visibility = "visible";
-  insights2ContainerImage.style.opacity = "0";
-  insights2ContainerImage.style.clipPath = "inset(100% 0px 0px)";
-  insights2ContainerImage.style.visibility = "hidden";
-  insights2ContainerImageimg.style.transform = "scale(1.2)";
-});
-insights3Container.addEventListener("mouseover", () => {
-  cursor.style.visibility = "hidden";
-  cursorCircle.style.visibility = "hidden";
-  insights3ContainerImage.style.opacity = ".5";
-  insights3ContainerImage.style.clipPath = "inset(0px)";
-  insights3ContainerImage.style.visibility = "visible";
-  insights3ContainerImageimg.style.transform = "scale(1)";
-});
-insights3Container.addEventListener("mouseout", () => {
-  cursor.style.visibility = "visible";
-  cursorCircle.style.visibility = "visible";
-  insights3ContainerImage.style.opacity = "0";
-  insights3ContainerImage.style.clipPath = "inset(100% 0px 0px)";
-  insights3ContainerImage.style.visibility = "hidden";
-  insights3ContainerImageimg.style.transform = "scale(1.2)";
-});
-topRatedHoverContainer1.addEventListener("mouseover" ,()=>{
-  cursor.style.visibility = "hidden";
-  cursorCircle.style.visibility = "hidden";
-  topRatedHoverContainer1img.style.opacity = ".5";
-  topRatedHoverContainer1img.style.clipPath = "inset(0px)";
-  topRatedHoverContainer1img.style.visibility = "visible";
-  topRatedHoverContainer1image.style.transform = "scale(1)";
-});
-topRatedHoverContainer1.addEventListener("mouseout" ,()=>{
-  cursor.style.visibility = "visible";
-  cursorCircle.style.visibility = "visible";
-  topRatedHoverContainer1img.style.opacity = "0";
-  topRatedHoverContainer1img.style.clipPath = "inset(100% 0px 0px)";
-  topRatedHoverContainer1img.style.visibility = "hidden";
-  topRatedHoverContainer1image.style.transform = "scale(1.2)";
-});
-topRatedHoverContainer2.addEventListener("mouseover" ,()=>{
-  cursor.style.visibility = "hidden";
-  cursorCircle.style.visibility = "hidden";
-  topRatedHoverContainer2img.style.opacity = ".5";
-  topRatedHoverContainer2img.style.clipPath = "inset(0px)";
-  topRatedHoverContainer2img.style.visibility = "visible";
-  topRatedHoverContainer2image.style.transform = "scale(1)";
-});
-topRatedHoverContainer2.addEventListener("mouseout" ,()=>{
-  cursor.style.visibility = "visible";
-  cursorCircle.style.visibility = "visible";
-  topRatedHoverContainer2img.style.opacity = "0";
-  topRatedHoverContainer2img.style.clipPath = "inset(100% 0px 0px)";
-  topRatedHoverContainer2img.style.visibility = "hidden";
-  topRatedHoverContainer2image.style.transform = "scale(1.2)";
-});
-topRatedHoverContainer3.addEventListener("mouseover" ,()=>{
-  cursor.style.visibility = "hidden";
-  cursorCircle.style.visibility = "hidden";
-  topRatedHoverContainer3img.style.opacity = ".5";
-  topRatedHoverContainer3img.style.clipPath = "inset(0px)";
-  topRatedHoverContainer3img.style.visibility = "visible";
-  topRatedHoverContainer3image.style.transform = "scale(1)";
-});
-topRatedHoverContainer3.addEventListener("mouseout" ,()=>{
-  cursor.style.visibility = "visible";
-  cursorCircle.style.visibility = "visible";
-  topRatedHoverContainer3img.style.opacity = "0";
-  topRatedHoverContainer3img.style.clipPath = "inset(100% 0px 0px)";
-  topRatedHoverContainer3img.style.visibility = "hidden";
-  topRatedHoverContainer3image.style.transform = "scale(1.2)";
-});
-topRatedHoverContainer4.addEventListener("mouseover" ,()=>{
-  cursor.style.visibility = "hidden";
-  cursorCircle.style.visibility = "hidden";
-  topRatedHoverContainer4img.style.opacity = ".5";
-  topRatedHoverContainer4img.style.clipPath = "inset(0px)";
-  topRatedHoverContainer4img.style.visibility = "visible";
-  topRatedHoverContainer4image.style.transform = "scale(1)";
-});
-topRatedHoverContainer4.addEventListener("mouseout" ,()=>{
-  cursor.style.visibility = "visible";
-  cursorCircle.style.visibility = "visible";
-  topRatedHoverContainer4img.style.opacity = "0";
-  topRatedHoverContainer4img.style.clipPath = "inset(100% 0px 0px)";
-  topRatedHoverContainer4img.style.visibility = "hidden";
-  topRatedHoverContainer4image.style.transform = "scale(1.2)";
-});
-topRatedHoverContainer5.addEventListener("mouseover" ,()=>{
-  cursor.style.visibility = "hidden";
-  cursorCircle.style.visibility = "hidden";
-  topRatedHoverContainer5img.style.opacity = ".5";
-  topRatedHoverContainer5img.style.clipPath = "inset(0px)";
-  topRatedHoverContainer5img.style.visibility = "visible";
-  topRatedHoverContainer5image.style.transform = "scale(1)";
-});
-topRatedHoverContainer5.addEventListener("mouseout" ,()=>{
-  cursor.style.visibility = "visible";
-  cursorCircle.style.visibility = "visible";
-  topRatedHoverContainer5img.style.opacity = "0";
-  topRatedHoverContainer5img.style.clipPath = "inset(100% 0px 0px)";
-  topRatedHoverContainer5img.style.visibility = "hidden";
-  topRatedHoverContainer5image.style.transform = "scale(1.2)";
-});
-topRatedHoverContainer6.addEventListener("mouseover" ,()=>{
-  cursor.style.visibility = "hidden";
-  cursorCircle.style.visibility = "hidden";
-  topRatedHoverContainer6img.style.opacity = ".5";
-  topRatedHoverContainer6img.style.clipPath = "inset(0px)";
-  topRatedHoverContainer6img.style.visibility = "visible";
-  topRatedHoverContainer6image.style.transform = "scale(1)";
-});
-topRatedHoverContainer6.addEventListener("mouseout" ,()=>{
-  cursor.style.visibility = "visible";
-  cursorCircle.style.visibility = "visible";
-  topRatedHoverContainer6img.style.opacity = "0";
-  topRatedHoverContainer6img.style.clipPath = "inset(100% 0px 0px)";
-  topRatedHoverContainer6img.style.visibility = "hidden";
-  topRatedHoverContainer6image.style.transform = "scale(1.2)";
-});
+    cursorCircle.style.visibility = "hidden";
+    insights3ContainerImage.style.opacity = ".5";
+    insights3ContainerImage.style.clipPath = "inset(0px)";
+    insights3ContainerImage.style.visibility = "visible";
+    insights3ContainerImageimg.style.transform = "scale(1)";
+  });
+  insights3Container.addEventListener("mouseout", () => {
+    cursor.style.visibility = "visible";
+    cursorCircle.style.visibility = "visible";
+    insights3ContainerImage.style.opacity = "0";
+    insights3ContainerImage.style.clipPath = "inset(100% 0px 0px)";
+    insights3ContainerImage.style.visibility = "hidden";
+    insights3ContainerImageimg.style.transform = "scale(1.2)";
+  });
+  topRatedHoverContainer1.addEventListener("mouseover" ,()=>{
+    cursor.style.visibility = "hidden";
+    cursorCircle.style.visibility = "hidden";
+    topRatedHoverContainer1img.style.opacity = ".5";
+    topRatedHoverContainer1img.style.clipPath = "inset(0px)";
+    topRatedHoverContainer1img.style.visibility = "visible";
+    topRatedHoverContainer1image.style.transform = "scale(1)";
+  });
+  topRatedHoverContainer1.addEventListener("mouseout" ,()=>{
+    cursor.style.visibility = "visible";
+    cursorCircle.style.visibility = "visible";
+    topRatedHoverContainer1img.style.opacity = "0";
+    topRatedHoverContainer1img.style.clipPath = "inset(100% 0px 0px)";
+    topRatedHoverContainer1img.style.visibility = "hidden";
+    topRatedHoverContainer1image.style.transform = "scale(1.2)";
+  });
+  topRatedHoverContainer2.addEventListener("mouseover" ,()=>{
+    cursor.style.visibility = "hidden";
+    cursorCircle.style.visibility = "hidden";
+    topRatedHoverContainer2img.style.opacity = ".5";
+    topRatedHoverContainer2img.style.clipPath = "inset(0px)";
+    topRatedHoverContainer2img.style.visibility = "visible";
+    topRatedHoverContainer2image.style.transform = "scale(1)";
+  });
+  topRatedHoverContainer2.addEventListener("mouseout" ,()=>{
+    cursor.style.visibility = "visible";
+    cursorCircle.style.visibility = "visible";
+    topRatedHoverContainer2img.style.opacity = "0";
+    topRatedHoverContainer2img.style.clipPath = "inset(100% 0px 0px)";
+    topRatedHoverContainer2img.style.visibility = "hidden";
+    topRatedHoverContainer2image.style.transform = "scale(1.2)";
+  });
+  topRatedHoverContainer3.addEventListener("mouseover" ,()=>{
+    cursor.style.visibility = "hidden";
+    cursorCircle.style.visibility = "hidden";
+    topRatedHoverContainer3img.style.opacity = ".5";
+    topRatedHoverContainer3img.style.clipPath = "inset(0px)";
+    topRatedHoverContainer3img.style.visibility = "visible";
+    topRatedHoverContainer3image.style.transform = "scale(1)";
+  });
+  topRatedHoverContainer3.addEventListener("mouseout" ,()=>{
+    cursor.style.visibility = "visible";
+    cursorCircle.style.visibility = "visible";
+    topRatedHoverContainer3img.style.opacity = "0";
+    topRatedHoverContainer3img.style.clipPath = "inset(100% 0px 0px)";
+    topRatedHoverContainer3img.style.visibility = "hidden";
+    topRatedHoverContainer3image.style.transform = "scale(1.2)";
+  });
+  topRatedHoverContainer4.addEventListener("mouseover" ,()=>{
+    cursor.style.visibility = "hidden";
+    cursorCircle.style.visibility = "hidden";
+    topRatedHoverContainer4img.style.opacity = ".5";
+    topRatedHoverContainer4img.style.clipPath = "inset(0px)";
+    topRatedHoverContainer4img.style.visibility = "visible";
+    topRatedHoverContainer4image.style.transform = "scale(1)";
+  });
+  topRatedHoverContainer4.addEventListener("mouseout" ,()=>{
+    cursor.style.visibility = "visible";
+    cursorCircle.style.visibility = "visible";
+    topRatedHoverContainer4img.style.opacity = "0";
+    topRatedHoverContainer4img.style.clipPath = "inset(100% 0px 0px)";
+    topRatedHoverContainer4img.style.visibility = "hidden";
+    topRatedHoverContainer4image.style.transform = "scale(1.2)";
+  });
+  topRatedHoverContainer5.addEventListener("mouseover" ,()=>{
+    cursor.style.visibility = "hidden";
+    cursorCircle.style.visibility = "hidden";
+    topRatedHoverContainer5img.style.opacity = ".5";
+    topRatedHoverContainer5img.style.clipPath = "inset(0px)";
+    topRatedHoverContainer5img.style.visibility = "visible";
+    topRatedHoverContainer5image.style.transform = "scale(1)";
+  });
+  topRatedHoverContainer5.addEventListener("mouseout" ,()=>{
+    cursor.style.visibility = "visible";
+    cursorCircle.style.visibility = "visible";
+    topRatedHoverContainer5img.style.opacity = "0";
+    topRatedHoverContainer5img.style.clipPath = "inset(100% 0px 0px)";
+    topRatedHoverContainer5img.style.visibility = "hidden";
+    topRatedHoverContainer5image.style.transform = "scale(1.2)";
+  });
+  topRatedHoverContainer6.addEventListener("mouseover" ,()=>{
+    cursor.style.visibility = "hidden";
+    cursorCircle.style.visibility = "hidden";
+    topRatedHoverContainer6img.style.opacity = ".5";
+    topRatedHoverContainer6img.style.clipPath = "inset(0px)";
+    topRatedHoverContainer6img.style.visibility = "visible";
+    topRatedHoverContainer6image.style.transform = "scale(1)";
+  });
+  topRatedHoverContainer6.addEventListener("mouseout" ,()=>{
+    cursor.style.visibility = "visible";
+    cursorCircle.style.visibility = "visible";
+    topRatedHoverContainer6img.style.opacity = "0";
+    topRatedHoverContainer6img.style.clipPath = "inset(100% 0px 0px)";
+    topRatedHoverContainer6img.style.visibility = "hidden";
+    topRatedHoverContainer6image.style.transform = "scale(1.2)";
+  });
+}
 
 
 
@@ -697,7 +699,7 @@ const clickableHeadings = document.getElementsByClassName("clickableHeading");
 const clickableHeadingButtons = document.getElementsByClassName("clickableHeadingButton");
 const collapsibleDetails = document.getElementsByClassName("detailCollapse1");
 
-for (let i = 0; i < clickableHeadings.length; i++) {
+for (let i = 0; i < 6; i++) {
   const clickableHeading = clickableHeadings[i];
   const listItem = listItems[i];
   const clickableHeadingButton = clickableHeadingButtons[i];
@@ -709,7 +711,49 @@ for (let i = 0; i < clickableHeadings.length; i++) {
     listItem.classList.toggle("detailOpened");
     clickableHeadingButton.classList.toggle("changeHeadingColor");
     
-    for (let j = 0; j < collapsibleDetails.length; j++) {
+    for (let j = 0; j < 6; j++) {
+      if (j !== i) {
+        collapsibleDetails[j].classList.add("detailCollapseClose");
+        listItems[j].classList.remove("detailOpened");
+        clickableHeadingButtons[j].classList.remove("changeHeadingColor");
+      }
+    }
+  });
+}
+for (let i = 6; i < 12; i++) {
+  const clickableHeading = clickableHeadings[i];
+  const listItem = listItems[i];
+  const clickableHeadingButton = clickableHeadingButtons[i];
+  const detailCollapse = collapsibleDetails[i];
+  
+  clickableHeading.addEventListener("click", () => {
+    
+    detailCollapse.classList.toggle("detailCollapseClose");
+    listItem.classList.toggle("detailOpened");
+    clickableHeadingButton.classList.toggle("changeHeadingColor");
+    
+    for (let j = 5; j < 12; j++) {
+      if (j !== i) {
+        collapsibleDetails[j].classList.add("detailCollapseClose");
+        listItems[j].classList.remove("detailOpened");
+        clickableHeadingButtons[j].classList.remove("changeHeadingColor");
+      }
+    }
+  });
+}
+for (let i = 12; i < clickableHeadings.length; i++) {
+  const clickableHeading = clickableHeadings[i];
+  const listItem = listItems[i];
+  const clickableHeadingButton = clickableHeadingButtons[i];
+  const detailCollapse = collapsibleDetails[i];
+  
+  clickableHeading.addEventListener("click", () => {
+    
+    detailCollapse.classList.toggle("detailCollapseClose");
+    listItem.classList.toggle("detailOpened");
+    clickableHeadingButton.classList.toggle("changeHeadingColor");
+    
+    for (let j = 12; j < collapsibleDetails.length; j++) {
       if (j !== i) {
         collapsibleDetails[j].classList.add("detailCollapseClose");
         listItems[j].classList.remove("detailOpened");
