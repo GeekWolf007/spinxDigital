@@ -33,11 +33,7 @@ body {
   width: 100vw;
   overflow-x: hidden !important ;
 }
-.wholeWebsiteWrapper{
-  overflow-x: hidden;
-  width: 100vw;
-  position: relative;
-}
+
 
 
 
@@ -3316,6 +3312,13 @@ footer{
   }
 }
 @media only screen and (max-width:992px){
+  
+  .wholeWebsiteWrapper{
+    overflow-x: hidden;
+    width: 100vw;
+    position: relative;
+  }
+  
   .awardsCard{
     flex: 0 0 auto;
     width: 50%;
