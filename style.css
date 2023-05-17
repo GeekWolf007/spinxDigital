@@ -32,6 +32,12 @@ body {
   scrollbar-width: thin;
   width: 100vw;
 }
+.wholeWebsiteWrapper{
+  overflow-x: hidden;
+  width: 100vw;
+  position: relative;
+}
+
 
 
 
