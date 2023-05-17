@@ -344,6 +344,13 @@ const topRatedHoverContainer6 = document.getElementsByClassName("topRatedHoverCo
 const topRatedHoverContainer6img = document.getElementById("topRatedHoverContainer6");
 const topRatedHoverContainer6image = document.getElementById("topRatedHoverContainer6image");
 
+const cursorHovered = () =>{
+  cursorCircle.classList.add("cursorHovered")
+};
+const cursorNotHovered = () =>{
+  cursorCircle.classList.remove("cursorHovered")
+};
+
 
 if(window.innerWidth>=1000){
 
