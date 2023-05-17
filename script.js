@@ -72,6 +72,67 @@ window.addEventListener('load', () => {
     document.getElementsByClassName("discoveryItems")[0].classList.remove("scrollAnimationClassOpacity");
     document.getElementsByClassName("discoveryItems")[0].classList.remove("scrollAnimationClassTranslate");
 
+    if(window.innerWidth<= 800){
+      
+
+      let awardCards = document.getElementsByClassName("awardsCard");
+      let awardsHeading = document.getElementsByClassName("awardsHeading")[0];
+      let featuredProjectHeading = document.getElementById("featuredProjectHeading");
+      let projectsHeading = document.getElementsByClassName("projectsHeading")[1];
+
+      awardsHeading.classList.add("scrollAnimationClassOpacity");
+      awardsHeading.classList.add("scrollAnimationClassTranslate");
+      for (let item of awardCards) {
+        item.classList.add("scrollAnimationClassTranslate");
+        item.classList.add("scrollAnimationClassOpacity");
+      }
+      featuredProjectHeading.classList.add("scrollAnimationClassOpacity");
+      projectsHeading.classList.add("scrollAnimationClassOpacity");
+      projectsHeading.classList.add("scrollAnimationClassTranslate");
+      document.getElementsByClassName("brandPara")[0].classList.add("scrollAnimationClassOpacity");
+      document.getElementsByClassName("brandPara")[0].classList.add("scrollAnimationClassTranslate");
+      document.getElementsByClassName("brandRevealTitle")[0].classList.add("scrollAnimationClassOpacity");
+      document.getElementsByClassName("brandRevealTitle")[0].classList.add("scrollAnimationClassTranslate");
+      document.getElementsByClassName("revealExpertiseTitle")[0].classList.add("scrollAnimationClassOpacity");
+      document.getElementsByClassName("revealExpertiseTitle")[0].classList.add("scrollAnimationClassTranslate");
+      document.getElementsByClassName("expertiseList")[0].classList.add("scrollAnimationClassOpacity");
+      document.getElementsByClassName("revealPlatformHeading")[0].classList.add("scrollAnimationClassOpacity");
+      document.getElementsByClassName("revealPlatformHeading")[0].classList.add("scrollAnimationClassTranslate");
+      document.getElementsByClassName("revealTrustHeading")[0].classList.add("scrollAnimationClassOpacity");
+      document.getElementsByClassName("revealTrustHeading")[0].classList.add("scrollAnimationClassTranslate");
+      document.getElementsByClassName("trustDetailContainer")[0].classList.add("scrollAnimationClassOpacity");
+      document.getElementsByClassName("trustDetailContainer")[0].classList.add("scrollAnimationClassTranslate");
+      document.getElementsByClassName("learnRevealHeading")[0].classList.add("scrollAnimationClassOpacity");
+      document.getElementsByClassName("learnRevealHeading")[0].classList.add("scrollAnimationClassTranslate");
+      for(let a of document.getElementsByClassName("insights1Container")){
+        a.classList.add("scrollAnimationClassOpacity");
+        a.classList.add("scrollAnimationClassTranslate");
+      }
+      document.getElementById("insights4Container").classList.add("scrollAnimationClassOpacity");
+      document.getElementById("insights4Container").classList.add("scrollAnimationClassTranslate");
+      document.getElementsByClassName("concrevContainer")[0].classList.add("scrollAnimationClassTranslate");
+      document.getElementsByClassName("concrevContainer")[0].classList.add("scrollAnimationClassOpacity");
+      document.getElementsByClassName("anchorDI")[0].classList.add("scrollAnimationClassTranslate");
+      document.getElementsByClassName("anchorDI")[0].classList.add("scrollAnimationClassOpacity"); 
+      document.getElementsByClassName("anchorDI")[1].classList.add("scrollAnimationClassTranslate");
+      document.getElementsByClassName("anchorDI")[1].classList.add("scrollAnimationClassOpacity");
+      document.getElementsByClassName("weAreRight")[0].classList.add("scrollAnimationClassTranslate");
+      document.getElementsByClassName("weAreRight")[0].classList.add("scrollAnimationClassOpacity");
+      document.getElementsByClassName("weAreHeading")[0].classList.add("scrollAnimationClassTranslate");
+      document.getElementsByClassName("weAreHeading")[0].classList.add("scrollAnimationClassOpacity");
+      for( let divs of document.getElementsByClassName("topRatedHoverContainer")){
+        divs.classList.add("scrollAnimationClassTranslate");
+        divs.classList.add("scrollAnimationClassOpacity");
+      }
+      document.getElementsByClassName("mainHeadingOP")[0].classList.add("scrollAnimationClassOpacity");
+      document.getElementsByClassName("subHeadingOP")[0].classList.add("scrollAnimationClassOpacity");
+      document.getElementsByClassName("subHeadingOP")[0].classList.add("scrollAnimationClassTranslate");
+      document.getElementsByClassName("paraOP")[0].classList.add("scrollAnimationClassOpacity");
+      document.getElementsByClassName("paraOP")[0].classList.add("scrollAnimationClassTranslate");
+      document.getElementsByClassName("discoveryItems")[0].classList.add("scrollAnimationClassOpacity");
+      document.getElementsByClassName("discoveryItems")[0].classList.add("scrollAnimationClassTranslate");
+    }
+
   }, 1800);
 });
 
