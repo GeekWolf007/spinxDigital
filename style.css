@@ -31,13 +31,13 @@ body {
   min-height: 100vh;
   scrollbar-width: thin;
   width: 100vw;
+  overflow-x: hidden !important ;
 }
 .wholeWebsiteWrapper{
   overflow-x: hidden;
   width: 100vw;
   position: relative;
 }
-
 
 
 
@@ -3427,6 +3427,57 @@ footer{
   }
   .copyrightContainer{
     display: block;
+  }
+  .oneImageScroll{
+    padding-bottom: 60px;
+  }
+  .twoImageScroll{
+    padding: 60px 0;
+  }
+  .awards{
+    padding-bottom: 0;
+    padding-top: 64px;
+  }
+  .featuredProjects{
+    padding: 60px 0;
+  }
+  .weAre{
+    padding: 80px 0 32px;
+  }
+  .topRated{
+    padding: 60px 0;
+  }
+  .brandsSection{
+    padding: 70px 0;
+  }
+  .ourExpertise{
+    padding: 90px 0;
+  }
+  .platform_tech{
+    padding-top: 75px;
+    padding-bottom: 70px;
+  }
+  .discoverySection{
+    padding: 60px 0;
+  }
+  .learnSection{
+    padding-top: 70px;
+    padding-bottom: 60px;
+  }
+  .uniqueSection{
+    padding: 70px 0 50px;
+  }
+  .concrev{
+    padding: 40px 0 60px;
+  }
+  .diveInSection{
+    padding-top: 95px;
+  }
+  .startAProject{
+    padding: 138px 0;
+  }
+  footer{
+    padding-top: 60px;
   }
 }
 @media only screen and (max-width:880px){
