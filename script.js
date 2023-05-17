@@ -222,22 +222,24 @@ const onScroll= () => {
       document.getElementsByClassName("discoveryItems")[0].classList.add("scrollAnimationClassTranslate");
     }
   }
-
-  if(document.getElementsByClassName("brandsList")[0].getBoundingClientRect().top != 144.64999389648438  ){
-    const translateValue = (144.64999389648438  - document.getElementsByClassName("brandsList")[0].getBoundingClientRect().top)*-0.35;
-    document.getElementsByClassName("brandsList")[0].style.transform = `translateX(${translateValue}px)`
-  }
-  if(document.getElementsByClassName("brandsList")[1].getBoundingClientRect().top != 144.64999389648438  ){
-    const translateValue = (144.64999389648438  - document.getElementsByClassName("brandsList")[0].getBoundingClientRect().top)*0.35;
-    document.getElementsByClassName("brandsList")[1].style.transform = `translateX(${translateValue}px)`
-  }
-  if(document.getElementsByClassName("brandsList")[2].getBoundingClientRect().top !=149.35000610351562 ){
-    const translateValue = (149.35000610351562   - document.getElementsByClassName("brandsList")[2].getBoundingClientRect().top)*-0.35;
-    document.getElementsByClassName("brandsList")[2].style.transform = `translateX(${translateValue}px)`
-  }
-  if(document.getElementsByClassName("brandsList")[3].getBoundingClientRect().top !=149.35000610351562 ){
-    const translateValue = (149.35000610351562   - document.getElementsByClassName("brandsList")[2].getBoundingClientRect().top)*0.35;
-    document.getElementsByClassName("brandsList")[3].style.transform = `translateX(${translateValue}px)`
+  
+  if(window.innerWidth>=1200){
+    if(document.getElementsByClassName("brandsList")[0].getBoundingClientRect().top != 144.64999389648438  ){
+      const translateValue = (144.64999389648438  - document.getElementsByClassName("brandsList")[0].getBoundingClientRect().top)*-0.35;
+      document.getElementsByClassName("brandsList")[0].style.transform = `translateX(${translateValue}px)`
+    }
+    if(document.getElementsByClassName("brandsList")[1].getBoundingClientRect().top != 144.64999389648438  ){
+      const translateValue = (144.64999389648438  - document.getElementsByClassName("brandsList")[0].getBoundingClientRect().top)*0.35;
+      document.getElementsByClassName("brandsList")[1].style.transform = `translateX(${translateValue}px)`
+    }
+    if(document.getElementsByClassName("brandsList")[2].getBoundingClientRect().top !=149.35000610351562 ){
+      const translateValue = (149.35000610351562   - document.getElementsByClassName("brandsList")[2].getBoundingClientRect().top)*-0.35;
+      document.getElementsByClassName("brandsList")[2].style.transform = `translateX(${translateValue}px)`
+    }
+    if(document.getElementsByClassName("brandsList")[3].getBoundingClientRect().top !=149.35000610351562 ){
+      const translateValue = (149.35000610351562   - document.getElementsByClassName("brandsList")[2].getBoundingClientRect().top)*0.35;
+      document.getElementsByClassName("brandsList")[3].style.transform = `translateX(${translateValue}px)`
+    }
   }
 }
 
