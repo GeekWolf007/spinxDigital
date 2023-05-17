@@ -72,7 +72,7 @@ window.addEventListener('load', () => {
     document.getElementsByClassName("discoveryItems")[0].classList.remove("scrollAnimationClassOpacity");
     document.getElementsByClassName("discoveryItems")[0].classList.remove("scrollAnimationClassTranslate");
 
-    if(window.innerWidth<= 800){
+    if(window.innerWidth<= 1000){
       
 
       let awardCards = document.getElementsByClassName("awardsCard");
