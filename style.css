@@ -15,6 +15,12 @@
 a {
   text-decoration: none;
 }
+section{
+  width: 100vw;
+}
+footer{
+  width: 100vw;
+}
 body {
   font-family: 'Inter', sans-serif;
   font-weight: 400;
@@ -24,6 +30,7 @@ body {
   font-size: 16px;
   min-height: 100vh;
   scrollbar-width: thin;
+  width: 100vw;
 }
 
 
@@ -144,6 +151,9 @@ header,
   margin-top: 0;
   height: inherit;
   transition: all 0.6s ease;
+}
+header{
+  width: 100vw;
 }
 .fixedPosTop {
   position: fixed;
@@ -1557,6 +1567,9 @@ a.anchorWithoutDrop::before {
   opacity: 0;
   transition: all .8s ease;
 }
+#responsiveDiscovery{
+  opacity: 1 !important;
+}
 .listItem{
   position: relative;
   border-radius: 0;
@@ -2082,6 +2095,9 @@ a.anchorWithoutDrop::before {
   opacity: 0;
   transform: translateY(40px);
   transition: all .8s ease-out;
+}
+.width100{
+  width: 100% !important;
 }
 .discoveryItemsContainer{
   width: 100%;
@@ -2772,7 +2788,7 @@ a.anchorWithoutDrop::before {
 }
 .diveInHeading{
   flex: 0 0 auto;
-  width: 41.66667%;
+  width: 83.33333%;
   padding: 0 24px;
 }
 .diHeadingContainer h2{
@@ -2848,7 +2864,7 @@ a.anchorWithoutDrop::before {
 }
 .diveInImages{
   flex: 0 0 auto;
-  width: 58.33333%;
+  width: 16.66667%;
   padding: 0 24px;
 }
 .diImageContainer{
@@ -2905,6 +2921,7 @@ a.anchorWithoutDrop::before {
 
 
 
+
 .startAProject{
   float: left;
   padding: 180px 0;
@@ -2918,28 +2935,26 @@ a.anchorWithoutDrop::before {
 .startAProjectWrapper a{
   display: block;
 }
-.upperInfiniteLogo{
-  display: flex;
-}
 .infiniteLogo1{
-  flex-shrink: 0;
-  width: 100%;
+  width: 200%;
   height: 186px;
-  background: url("https://cdn-eahjn.nitrocdn.com/ChEvwayTHZmZJUAdsUNMLXuXZdBprFoQ/assets/images/optimized/rev-3bf3184/app/themes/spinxdigital/assets/images/cta-spinx.svg") 0 0 repeat-x;
+  position: relative;
+  background: url("img/spinxStartAProject.svg") 0 0 repeat-x;
   display: block;
+  animation: infiniteright 20s linear infinite;
+  animation-play-state: paused;
   margin-bottom: 30px;
-  animation: infiniteLogo 20s linear infinite paused;
-}
-.lowerInfiniteLogo{
-  display: flex;
+  text-indent: -9999px;
 }
 .infiniteLogo2{
-  flex-shrink: 0;
-  width: 100%;
+  width: 400%;
   height: 186px;
-  background: url("https://cdn-eahjn.nitrocdn.com/ChEvwayTHZmZJUAdsUNMLXuXZdBprFoQ/assets/images/optimized/rev-3bf3184/app/themes/spinxdigital/assets/images/cta-spinx.svg") 0 0 repeat-x;
+  position: relative;
+  background: url("img/spinxStartAProject.svg") 0 0 repeat-x;
   display: block;
-  animation: infiniteLogo2 20s linear infinite paused;
+  animation: infiniteleft 20s linear infinite;
+  animation-play-state: paused;
+  margin-bottom: 30px;
 }
 .startAProjectWrapper:hover .infiniteLogo1,
 .startAProjectWrapper:hover .infiniteLogo2 {
@@ -2976,7 +2991,7 @@ a.anchorWithoutDrop::before {
 }
 .projectTitle h2 span::before{
   content: "";
-  background: url("https://cdn-eahjn.nitrocdn.com/ChEvwayTHZmZJUAdsUNMLXuXZdBprFoQ/assets/images/optimized/rev-3bf3184/app/themes/spinxdigital/assets/images/footer-arrow.svg") no-repeat 0 0;
+  background: url("img/greenArrow.svg") no-repeat 0 0;
   position: absolute;
   top: 0;
   right: 0;
@@ -3000,20 +3015,20 @@ a.anchorWithoutDrop::before {
 .startAProjectWrapper:hover .projectTitle h2 span::after{
   width: 59px;
 }
-@keyframes infiniteLogo {
+@keyframes infiniteright {
   from{
-    transform: translateX(-100%);
+    transform: translateX(-50%);
   }
   to{
     transform: translateX(0);
   }
 }
-@keyframes infiniteLogo2 {
+@keyframes infiniteleft {
   from{
-    transform: translateX(-90%);
+    transform: translateX(-10.5%);
   }
   to{
-    transform: translateX(-190%);
+    transform: translateX(-35.5%);
   }
 }
 
@@ -3050,13 +3065,13 @@ footer{
 }
 .footerColumn1{
   flex: 0 0 auto;
-  width: 33.33333%;
+  width: 100%;
   padding: 0 24px;
 }
 .footerColumn2{
   margin-left: auto !important;
   flex: 0 0 auto;
-  width: 25%;
+  width: 100%;
   padding: 0 24px;
 }
 .column1Container{
@@ -3196,6 +3211,15 @@ footer{
   .imageContainer{
     padding: 68px;
   }
+  .discoveryItems{
+    display: none;
+  }
+  .concrevItems{
+    display: none;
+  }
+  .trustTeam{
+    display: none;
+  }
 }
 @media only screen and (max-width:1200px){
   .twoImageImageOne img{
@@ -3239,6 +3263,11 @@ footer{
   }
   .brandImgBlack:nth-child(7){
     display: none;
+  }
+  .diImageContainer{
+    width: 768px;
+    height: 550px;
+    margin-left: -312px;
   }
 }
 @media only screen and (max-width:1000px){
@@ -3330,6 +3359,69 @@ footer{
   .detailMore{
     width: 100% !important;
   }
+  .ourProcessText{
+    width: 100%;
+  }
+  .ourProcessVideo{
+    width: 100%;
+    justify-content: flex-start;
+  }
+  .videoWrapperWrapper{
+    margin-top: 20px;
+  }
+  .insightsContent{
+    padding-left: 24px;
+    width: 100%;
+  }
+  .insightsInnerContainer{
+    padding: 32px 0;
+  }
+  .moreInsightsContainer a{
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .uniqueHeadingWrapper{
+    width: 100%;
+  }
+  .diImageContainer{
+    width: 500px;
+    height: 380px;
+    margin-left: -164px;
+  }
+  .diHeadingContainer h2{
+    font-size: 8vw !important;
+    letter-spacing: -2px;
+  }
+  .diHeadingContainer ul li{
+    margin-bottom: 20px;
+  }
+  .infiniteLogo1{
+    margin-bottom: 20px;
+    height: 92px;
+    background-size: contain;
+  }
+  .infiniteLogo2{
+    height: 92px;
+    background-size: contain;
+  }
+  .column1Container a{
+    margin-bottom: 16px;
+  }
+  .footerColumn1{
+    margin-bottom: 60px;
+  }
+  .logoFooter a img{
+    margin-bottom: 60px;
+  }
+  .logoFooter{
+    display: block;
+  }
+  .logoFooter span{
+    display: block;
+  }
+  .copyrightContainer{
+    display: block;
+  }
 }
 @media only screen and (max-width:880px){
   .twoImageTextInner {
@@ -3371,6 +3463,11 @@ footer{
   .brandImgBlack img{
     width: 100%;
     height: 100%;
+  }
+  .diImageContainer{
+    width: 490px;
+    height: 350px;
+    margin-left: -194px;
   }
 }
 @media only screen and (max-width:650px){
@@ -3437,6 +3534,9 @@ footer{
   }
   .WE_ARE h2{
     font-size: 11.5vw;
+  }
+  .infiniteLogo1 , .infiniteLogo2{
+    animation-play-state: running;
   }
 }
 @media only screen and (max-width:380px){
@@ -3533,6 +3633,54 @@ footer{
   .platformWordWhite{
     font-size: calc(13px + 1 * ( ( 100vw - 375px ) / 1065 ))
   }
+  .mainHeadingOP{
+    font-size: calc(70px + 80 * ( ( 100vw - 375px ) / 1065 ));;
+  }
+  .subHeadingOP{
+    font-size: calc(32px + 22 * ( ( 100vw - 375px ) / 1065 ));
+  }
+  .paraOP h4{
+    font-size: calc(22px + 4 * ( ( 100vw - 375px ) / 1065 ));
+  }
+  .learnRevealHeading{
+    font-size: calc(70px + 80 * ( ( 100vw - 375px ) / 1065 ));
+  }
+  .insightsContent span{
+    font-size: calc(16px + 2 * ( ( 100vw - 375px ) / 1065 ));
+  }
+  .insightsFooter span{
+    font-size: 12px;
+  }
+  .insightsContent a{
+    font-size: calc(32px + 22 * ( ( 100vw - 375px ) / 1065 ));
+  }
+  .uniqueHeadingWrapper h3{
+    font-size: calc(40px + 36 * ( ( 100vw - 375px ) / 1065 ));
+  }
+  .uniqueHeadingWrapper h4{
+    font-size: calc(22px + 4 * ( ( 100vw - 375px ) / 1065 ));
+  }
+  .diHeadingContainer h2{
+    font-size: calc(70px + 80 * ( ( 100vw - 375px ) / 1065 ));
+  }
+  .diHeadingContainer ul li a{
+    font-size: calc(40px + 36 * ( ( 100vw - 375px ) / 1065 ));
+  }
+  .projectTitle h2{
+    font-size: calc(40px + 36 * ( ( 100vw - 375px ) / 1065 ));
+  }
+  .column1Container h5{
+    font-size: calc(13px + 1 * ( ( 100vw - 375px ) / 1065 ));
+  }
+  .column1Container h4 a{
+    font-size: calc(22px + 4 * ( ( 100vw - 375px ) / 1065 ));
+  }
+  .logoFooter span{
+    font-size: calc(12px + 2 * ( ( 100vw - 375px ) / 1065 ));
+  }
+  .linksFooter ul li a{
+    font-size: calc(12px + 2 * ( ( 100vw - 375px ) / 1065 ));
+  }
 }
 @media only screen and (min-width:375px){
   .twoImageTextInner h2{
@@ -3567,6 +3715,13 @@ footer{
   }
   .heroHeading{
     max-width: var(--maxWidth-Container);
+  }
+  .diveInImages{
+    flex: 0 0 auto;
+    width: 33.33333%;
+  }
+  .diveInHeading{
+    width: 66.66667%;
   }
 }
 @media only screen and (min-width:992px){
@@ -3633,6 +3788,13 @@ footer{
     flex: 0 0 auto;
     width: 83.33333%;
   }
+  .footerColumn1{
+    flex: 0 0 auto;
+    width: 33.33333%;
+  }
+  .footerColumn2{
+    width: 25%;
+  }
 }
 @media only screen and (min-width:1200px){
   :root{
@@ -3682,6 +3844,13 @@ footer{
   }
   .para_anchor{
     flex: 0 0 auto;
+    width: 50%;
+  }
+  .diveInImages{
+    flex: 0 0 auto;
+    width: 50%;
+  }
+  .diveInHeading{
     width: 50%;
   }
 }
@@ -3767,5 +3936,60 @@ footer{
   }
   .platformWordWhite{
     font-size: 18px;
+  }
+  #responsiveDiscovery{
+    display: none;
+  }
+  .mainHeadingOP{
+    font-size: 150px;
+  }
+  .subHeadingOP{
+    font-size: 54px;
+  }
+  .paraOP h4{
+    font-size: 26px;
+  }
+  .learnRevealHeading{
+    font-size: 150px;
+  }
+  .insightsContent span{
+    font-size: 18px;
+  }
+  .insightsContent a{
+    font-size: 54px;
+  }
+  .uniqueHeadingWrapper h3{
+    font-size: 76px;
+  }
+  .uniqueHeadingWrapper h4{
+    font-size: 26px;
+  }
+  .diHeadingContainer h2{
+    font-size: 150px;
+  }
+  .diHeadingContainer ul li a{
+    font-size: 76px;
+  }
+  .diveInHeading{
+    width: 41.66667%;
+  }
+  .diveInImages{
+    flex: 0 0 auto;
+    width: 58.33333%;
+  }
+  .projectTitle h2{
+    font-size: 76px;
+  }
+  .column1Container h5{
+    font-size: 14px;
+  }
+  .column1Container h4 a{
+    font-size: 26px;
+  }
+  .logoFooter span{
+    font-size: 14px;
+  }
+  .linksFooter ul li a{
+    font-size: 14px;
   }
 }
