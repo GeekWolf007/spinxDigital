@@ -1411,7 +1411,9 @@ a.anchorWithoutDrop::before {
   flex: 0 0 auto;
   width: 50%;
   padding: 0 24px;
-  
+  margin-bottom: 1.5rem;
+  flex-shrink: 0;
+  width: 100%;
 }
 .titleHeading h2{
   font-size: 76px;
@@ -1429,7 +1431,7 @@ a.anchorWithoutDrop::before {
   align-self: flex-end !important;
   margin-left: auto !important;
   flex: 0 0 auto;
-  width: 41.66667%;
+  width: 100%;
   max-width: 100%;
   padding: 0 24px;
 }
@@ -1522,12 +1524,8 @@ a.anchorWithoutDrop::before {
 }
 .expertiseText{
   flex: 0 0 auto;
-  width: 33.33333%;
+  width: 100%;
   padding: 0 24px;
-}
-.expertiseStickyText{
-  position: sticky;
-  top: 0;
 }
 .expertiseStickyText h5{
   padding: 70px 0 22px;
@@ -1553,7 +1551,7 @@ a.anchorWithoutDrop::before {
 }
 .expertiseList{
   flex: 0 0 auto;
-  width: 58.33333%;
+  width: 100%;
   margin-left: auto !important;
   padding: 0 24px;
   opacity: 0;
@@ -1871,7 +1869,7 @@ a.anchorWithoutDrop::before {
 }
 .para_anchor{
   flex: 0 0 auto;
-  width: 50%;
+  width: 100%;
   padding: 0 24px;
 }
 .para_anchor p{
@@ -3325,6 +3323,13 @@ footer{
   .weAreStats{
     margin-bottom: 32px;
   }
+  .detailPara{
+    width: 100% !important;
+    margin-bottom: 1.5rem !important;
+  }
+  .detailMore{
+    width: 100% !important;
+  }
 }
 @media only screen and (max-width:880px){
   .twoImageTextInner {
@@ -3504,6 +3509,30 @@ footer{
   .titleHeading h2{
     font-size: calc(40px + 36 * ( ( 100vw - 375px ) / 1065 ));
   }
+  .expertiseStickyText h3{
+    font-size: calc(32px + 22 * ( ( 100vw - 375px ) / 1065 ));
+  }
+  .expertiseStickyText h5{
+    font-size: calc(13px + 1 * ( ( 100vw - 375px ) / 1065 ));
+  }
+  .listItem h3{
+    font-size: calc(22px + 14 * ( ( 100vw - 375px ) / 1065 ));
+  }
+  .detailPara p{
+    font-size: calc(16px + 2 * ( ( 100vw - 375px ) / 1065 ));
+  }
+  .detailPara a{
+    font-size: calc(13px + 1 * ( ( 100vw - 375px ) / 1065 ));
+  }
+  .platform_techTitleContainer h3{
+    font-size: calc(40px + 36 * ( ( 100vw - 375px ) / 1065 ));
+  }
+  .platformWord{
+    font-size: calc(13px + 1 * ( ( 100vw - 375px ) / 1065 ))
+  }
+  .platformWordWhite{
+    font-size: calc(13px + 1 * ( ( 100vw - 375px ) / 1065 ))
+  }
 }
 @media only screen and (min-width:375px){
   .twoImageTextInner h2{
@@ -3588,6 +3617,22 @@ footer{
   .titleHeading{
     margin-bottom: 3rem !important;
   }
+  .expertiseText{
+    flex: 0 0 auto;
+    width: 41.66667%;
+  }
+  .expertiseList{
+    flex: 0 0 auto;
+    width: 58.33333%;
+  }
+  .expertiseStickyText {
+    position: sticky;
+    top: 0;
+  }
+  .para_anchor{
+    flex: 0 0 auto;
+    width: 83.33333%;
+  }
 }
 @media only screen and (min-width:1200px){
   :root{
@@ -3622,6 +3667,22 @@ footer{
   }
   .titleHeading{
     margin-bottom: 0 !important;
+  }
+  .titleHeading{
+    flex: 0 0 auto;
+    width: 50%;
+  }
+  .titleParagraph{
+    flex: 0 0 auto;
+    width: 41.66667%;
+  }
+  .expertiseText{
+    flex: 0 0 auto;
+    width: 33.33333%;
+  }
+  .para_anchor{
+    flex: 0 0 auto;
+    width: 50%;
   }
 }
 @media only screen and (min-width:1400px){
@@ -3682,5 +3743,29 @@ footer{
   }
   .titleHeading h2{
     font-size: 76px;
+  }
+  .expertiseStickyText h3{
+    font-size: 54px;
+  }
+  .expertiseStickyText h5{
+    font-size: 14px;
+  }
+  .listItem h3{
+    font-size: 36px;
+  }
+  .detailPara p{
+    font-size: 18px;
+  }
+  .detailPara a{
+    font-size: 18px;
+  }
+  .platform_techTitleContainer h3{
+    font-size: 76px;
+  }
+  .platformWord{
+    font-size: 18px;
+  }
+  .platformWordWhite{
+    font-size: 18px;
   }
 }
