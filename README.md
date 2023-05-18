@@ -11,7 +11,7 @@ I have added the following extra features:
 and much more....
 
 ## View Website 
-No need to install anything just [click here](](https://www.spinxdigital.com) to go to the website
+No need to install anything just [click here](https://www.spinxdigital.com) to go to the website
 
 ## Technologies Used 
 The project is created solely via: 
