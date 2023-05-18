@@ -307,7 +307,7 @@ const onScroll= () => {
 window.addEventListener("scroll", onScroll);
 document.body.addEventListener("touchmove", onScroll);
 window.addEventListener("scroll",()=>{
-  if(window.pageYOffset> window.innerHeight && window.innerWidth>1200){
+  if(window.pageYOffset> (0.5*window.innerHeight) && window.innerWidth>1200){
     document.getElementsByClassName("goUp")[0].style.display = "block"
   }else{
     document.getElementsByClassName("goUp")[0].style.display = "none"
