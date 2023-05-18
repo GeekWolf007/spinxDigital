@@ -37,8 +37,6 @@ body {
 
 
 
-
-
 /* ----------------------------------------Cursor---------------------------------------- */
 
 
@@ -136,7 +134,11 @@ body {
   transition: transform .6s ease-out;
   vertical-align: middle;
 }
-
+.eyeCursor{
+  transform: translateX(0) translateY(0) translateZ(0) rotate(0deg) scale(1.5);
+  background: #b4e300 url("img/eye.svg") no-repeat 50%;
+  background-size: 16px;
+}
 
 
 
@@ -3204,6 +3206,73 @@ footer{
 
 
 
+
+
+
+
+/* ---------------------------------------- Miscellaneous ---------------------------------------- */
+
+
+
+
+
+.goUp{
+  display: none;
+  background: #b4e300;
+  border-radius: 100%;
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  text-indent: -9999px;
+  width: 60px;
+  height: 60px;
+  z-index: 9;
+}
+.goUp:hover{
+  background-color: #16171a;
+}
+.goUp:hover .arrow{
+  border-bottom: 2px solid #fff;
+  border-right: 2px solid #fff;
+}
+.arrow{
+  position: absolute;
+  border-left: 0;
+  border-bottom: 2px solid #16171a;
+  width: 18px;
+  height: 18px;
+  transform: rotate(-135deg);
+  right: 0;
+  border-right: 2px solid #16171a;
+  border-top: 0;
+  top: 0;
+  left: 0;
+  bottom: -8px;
+  margin: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ---------------------------------------- MEDIA QUERIES ---------------------------------------- */
 
 
@@ -3271,6 +3340,9 @@ footer{
     height: 550px;
     margin-left: -312px;
   }
+  .goUp{
+    display: none;
+  }
 }
 @media only screen and (max-width:1000px){
   header{
@@ -3312,13 +3384,14 @@ footer{
   }
 }
 @media only screen and (max-width:992px){
-  
+
   .wholeWebsiteWrapper{
     overflow-x: hidden;
     width: 100vw;
     position: relative;
   }
   
+
   .awardsCard{
     flex: 0 0 auto;
     width: 50%;
