@@ -72,7 +72,7 @@ window.addEventListener('load', () => {
     document.getElementsByClassName("discoveryItems")[0].classList.remove("scrollAnimationClassOpacity");
     document.getElementsByClassName("discoveryItems")[0].classList.remove("scrollAnimationClassTranslate");
 
-    if(window.innerWidth<= 1000){
+    if(window.innerWidth<= 800){
       
 
       let awardCards = document.getElementsByClassName("awardsCard");
@@ -306,7 +306,13 @@ const onScroll= () => {
 
 window.addEventListener("scroll", onScroll);
 document.body.addEventListener("touchmove", onScroll);
-
+window.addEventListener("scroll",()=>{
+  if(window.pageYOffset> window.innerHeight && window.innerWidth>1200){
+    document.getElementsByClassName("goUp")[0].style.display = "block"
+  }else{
+    document.getElementsByClassName("goUp")[0].style.display = "none"
+  }
+});
 
 
 
@@ -343,14 +349,18 @@ const topRatedHoverContainer5image = document.getElementById("topRatedHoverConta
 const topRatedHoverContainer6 = document.getElementsByClassName("topRatedHoverContainer")[5];
 const topRatedHoverContainer6img = document.getElementById("topRatedHoverContainer6");
 const topRatedHoverContainer6image = document.getElementById("topRatedHoverContainer6image");
-
 const cursorHovered = () =>{
-  cursorCircle.classList.add("cursorHovered")
+  cursorCircle.classList.add("cursorHovered");
 };
 const cursorNotHovered = () =>{
-  cursorCircle.classList.remove("cursorHovered")
+  cursorCircle.classList.remove("cursorHovered");
 };
-
+const cursorHoveredEye = () =>{
+  cursorCircle.classList.add("eyeCursor");
+};
+const cursorNotHoveredEye = () =>{
+  cursorCircle.classList.remove("eyeCursor");
+};
 
 if(window.innerWidth>=1000){
 
@@ -396,12 +406,12 @@ if(window.innerWidth>=1000){
       cursor.style.opacity = "0";
       cursorCircle.style.opacity = "0";
     });
-    const cursorHovered = () =>{
-      cursorCircle.classList.add("cursorHovered")
-    };
-    const cursorNotHovered = () =>{
-      cursorCircle.classList.remove("cursorHovered")
-    };
+    // const cursorHovered = () =>{
+    //   cursorCircle.classList.add("cursorHovered")
+    // };
+    // const cursorNotHovered = () =>{
+    //   cursorCircle.classList.remove("cursorHovered")
+    // };
     insights1Container.addEventListener("mouseover", () => {
       cursor.style.visibility = "hidden";
       cursorCircle.style.visibility = "hidden";
@@ -561,7 +571,7 @@ let hamburgerIcon = document.getElementsByClassName("hamburgerLine");
 let hamburgerButton = document.getElementsByClassName("hamburgerIcon")[0];
 let hamburgerMenu = document.getElementsByClassName("hamburgerMenu")[0];
 
-window.addEventListener("scroll", function () {
+window.addEventListener("scroll", ()=> {
   let scrollTop = window.pageYOffset;
   if (scrollTop > 0) {
     if (!pageScrolled) {
